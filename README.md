@@ -61,14 +61,21 @@ Then, run the code with:
 
 ## Explaination 
 
-The aim of the Project is to create separated processes which are in communication with each other through a shared memory. 
+In the `/src` folder, there are five files: processA, processB and processAclient processAserver and master. 
 
-In the `/src` folder, there are three files: processA, processB and master. 
+When the user run the program they will see three possible choices; 1)Normal Mode, 2)Server Mode, 3)Client Mode user need to select one of them by entering 1,2 or 3. Normal mode is same with the second ARP assignment. 
 
-When the user runs the program, two consoles will appear: process A and process B. The user can control the pivot (green cross), which is inside of the process A window console, by using the right, left, upper and down buttons on the keyboard. Depends on user inputs, the object will move in the console. There is also a blue button (P button) for printing an image (multiple numbered images can be saved), which is saved as `.bmp` file into the folder `/output`. The image represents the position of the pivot in process A, represented by a blue circle. 
-During these processes happening, the user can follow the object movements by 0s continuously drawn on the process B window console.
-The process A and process B are in connection with each other through a shared memory and the usage of two semaphores. 
+The second mode of the program had been provided by creating the processAclient the aim of the second mode is, the client establishing a connection to an application with similar functionality that is running on another machine within the network. For that purpose when the user enter 2 the Server Mode will be open and the user will see "Insert port:" and the user needs to enter port number, then the program start to work. 
 
-Inside of the master file there is child process creation and processA and processB console creations.
+The third mode of the program had been provided by creating the processAserver the aim of the third mode is, the server is establishing a connection to an application with similar functionality that is running on another machine within the network. For that purpose when the user enter 3 the Client Mode will be open and the user needs to enter the address and the port respectively after that the program starts to work.
+
+After program starts to work two consoles will appear: process A and process B. The user can control the pivot (green cross), which is inside of the process A window console, by using the right, left, upper and down buttons on the keyboard. Depends on user inputs, the object will move in the console. There is also a blue button (P button) for printing an image (multiple numbered images can be saved), which is saved as `.bmp` file into the folder `/output`. The image represents the position of the pivot in process A, represented by a blue circle. 
+
+Inside of the master file child process creation and processA and processB console creations had been done. By using the WriteLog function to writing the log file had been provided. The modes had been defined here. When the user will close the processA and processB window the selections become visible again and the user can select the new mode, this feature created by using do loop inside of the master. 
 
 Each process stores its status in a `.log` file into the folder `/log`.
+
+
+
+
+
